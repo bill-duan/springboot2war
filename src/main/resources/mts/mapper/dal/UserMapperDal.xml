@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dxh.demo2war.mts.mapper.dal.UserMapperDal">
+  <resultMap id="BaseResultMap" type="com.dxh.demo2war.mts.entity.User">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="age" jdbcType="TINYINT" property="age" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+  </resultMap>
+
+  <select id="selectById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    *
+    from users
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
+</mapper>
