@@ -15,7 +15,7 @@ public class MyController {
 
     @RequestMapping(value = "/api/my/say", method = RequestMethod.GET)
     public String say(@RequestParam("userId") Long userId){
-        System.out.println(userId);
+        System.out.println(10/userId);
         return "success";
     }
 
