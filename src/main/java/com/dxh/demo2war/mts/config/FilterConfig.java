@@ -22,7 +22,6 @@ public class FilterConfig {
 
     @Bean
     public FilterRegistrationBean swaggerFilterRegister(){
-        System.out.println("swaggerEnable: " + swaggerEnable);
         FilterRegistrationBean filterBean = new FilterRegistrationBean();
         filterBean.setFilter(new SwaggerFilter());
         filterBean.addUrlPatterns("/*");

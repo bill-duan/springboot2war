@@ -21,7 +21,6 @@ public class SwaggerFilter implements Filter {
         HttpServletRequest servletRequest = (HttpServletRequest)request;
         HttpServletResponse servletResponse = (HttpServletResponse)response;
         String requestURI = servletRequest.getRequestURI();
-        System.out.println("requestURI: " + requestURI);
         //  /swagger-ui.html,/webjars,/swagger-resources,/v2/api-docs
         if(requestURI.contains("/swagger-ui.html")
                 || requestURI.contains("/webjars")
