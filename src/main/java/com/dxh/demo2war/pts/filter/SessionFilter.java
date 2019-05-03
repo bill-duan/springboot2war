@@ -1,13 +1,10 @@
 package com.dxh.demo2war.pts.filter;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.core.Ordered;
-
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = "/*",filterName = "sessionFilter")
+//@WebFilter(urlPatterns = "/*",filterName = "sessionFilter")
 public class SessionFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

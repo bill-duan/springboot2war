@@ -10,12 +10,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication(/*exclude = {ErrorMvcAutoConfiguration.class},*/
         scanBasePackages = {"com.dxh.demo2war.mts"})
 //@EnableTransactionManagement
 //@MapperScan(value = {"com.dxh.demo2war.mts.mapper.*"})
-@ServletComponentScan(basePackages = {"com.dxh.demo2war.pts"})
+//@ServletComponentScan(basePackages = {"com.dxh.demo2war.pts"}) //使用scan扫描带@WebFilter等的类
+@EnableSwagger2
 public class Demo2warApplication extends SpringBootServletInitializer {
 
     @Override
