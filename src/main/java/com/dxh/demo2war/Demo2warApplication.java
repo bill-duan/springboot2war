@@ -33,6 +33,4 @@ public class Demo2warApplication extends SpringBootServletInitializer {
         return builder.sources(Demo2warApplication.class).bannerMode(Banner.Mode.OFF);
     }
 
-
-
 }

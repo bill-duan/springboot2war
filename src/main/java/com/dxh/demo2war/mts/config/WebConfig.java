@@ -15,7 +15,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         System.out.println("val; "+val);
-//        registry.addInterceptor(new ErrorPageInterceptor());
+        registry.addInterceptor(new ErrorPageInterceptor());
     }
 
 //    @Override

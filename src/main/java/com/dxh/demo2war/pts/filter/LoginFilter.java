@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Locale;
 
 //@WebFilter(urlPatterns = "/*",filterName = "loginFilter")
 public class LoginFilter implements Filter {
@@ -20,6 +21,10 @@ public class LoginFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        HttpServletRequest servletRequest = (HttpServletRequest)request;
+        Locale locale = servletRequest.getLocale();
+        System.out.println(locale);
+
         chain.doFilter(request, response);
     }
 
